@@ -1,0 +1,20 @@
+/** @format */
+
+@font-face {
+  font-family: "Avenir Next"; /*Can be any text*/
+  font-weight: Bold;
+  src: local("AvenirNextLTPro"), url("../fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  // src: local("AvenirNextLTPro"), url("../fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Avenir Next"; /*Can be any text*/
+  font-weight: light;
+  src: local("AvenirNextLTPro"), url("../fonts/AvenirNextLTPro-It.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Avenir Next"; /*Can be any text*/
+  font-weight: normal;
+  src: local("AvenirNextLTPro"), url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}

@@ -1,0 +1,101 @@
+/** @format */
+
+.landingCover {
+  min-height: 100vh;
+}
+.logoContainer {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.loginLayout {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+
+  .loginForm {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    h1 {
+      color: #213f7d;
+    }
+    p {
+      line-height: 27px;
+      color: #545f7d;
+    }
+    form {
+      margin-top: 60px;
+      width: 447px;
+    }
+    .passwordInputWrap {
+      position: relative;
+      height: 50px;
+      cursor: pointer;
+      span {
+        z-index: 2;
+        position: absolute;
+        right: 0%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+        font-family: "Avenir Next";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #39cdcc;
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 1rem;
+      &[type="password"] {
+        position: absolute;
+      }
+    }
+    .inputWrap {
+      margin-bottom: 24px;
+    }
+    .forgotPassText {
+      margin-top: 24px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: left;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      color: #39cdcc;
+    }
+    button[type="submit"] {
+      background: #39cdcc;
+      border-radius: 8px;
+      margin-top: 30px;
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 15px;
+      font-family: "Avenir Next";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+}

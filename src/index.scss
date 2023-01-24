@@ -1,1 +1,41 @@
 /** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Avenir Next";
+}
+
+h1 {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 55px;
+  letter-spacing: -0.04em;
+}
+
+p {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+input {
+  outline: none;
+  background: #ffffff;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  border-radius: 5px;
+}
+input::placeholder {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #545f7d;
+  opacity: 0.6;
+}
