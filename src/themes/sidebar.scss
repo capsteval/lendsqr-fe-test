@@ -1,0 +1,74 @@
+/** @format */
+
+.sidebarWrap {
+  //   border: 1px solid red;
+  width: 20%;
+  max-width: 283px;
+  min-width: 200px;
+  .container {
+    padding: 30px;
+    .singleNavListItem {
+      margin-bottom: 50px;
+    }
+    .navList {
+      display: flex;
+      gap: 10px;
+      font-family: "Work Sans";
+      font-style: normal;
+
+      font-weight: 400;
+      color: #21407da3;
+
+      &.active {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height */
+        color: #213f7d;
+      }
+      &.dashboard {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  h5 {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #545f7d;
+    margin-bottom: 10px;
+  }
+  .navSection {
+    margin-bottom: 40px;
+    display: grid;
+    li {
+      list-style: none;
+      a {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #213f7d;
+        text-decoration: none;
+      }
+    }
+  }
+  a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #213f7d;
+    text-decoration: none;
+  }
+}

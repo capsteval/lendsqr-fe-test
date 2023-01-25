@@ -5,7 +5,7 @@ import Layout from "../../components/Layout";
 
 const Dashboard = () => {
   return (
-    <Layout text="A page for dashboard">
+    <Layout text="User">
       <div>Dashboard</div>
     </Layout>
   );

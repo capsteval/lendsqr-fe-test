@@ -14,7 +14,7 @@ const Login = (): JSX.Element => {
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log({ email, password });
-    navigate("/dashboard");
+    navigate("/admin");
   };
   return (
     <div className={s.landingCover}>

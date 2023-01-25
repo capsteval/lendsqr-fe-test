@@ -6,19 +6,16 @@ import Sidebar from "./Sidebar";
 
 const Layout = ({ children, text }: { children: ReactNode; text?: string }) => {
   return (
-    <div>
+    <div className="layoutContainer">
       <Header />
-      <div
-        style={{
-          display: "flex",
-        }}>
+      <div className="wrapper">
         <Sidebar />
-        <div>
+        <main>
           <div>
-            <h1>{text}</h1>
+            <h2 className="title">{text}</h2>
           </div>
           {children}
-        </div>
+        </main>
       </div>
     </div>
   );
