@@ -2,7 +2,7 @@
 
 import React from "react";
 
-function BellNotification() {
+function IconBellNotification() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" fill="none" viewBox="0 0 22 24">
       <mask id="path-1-outside-1_40117_17" width="22" height="25" x="0.163" y="-0.267" fill="#000" maskUnits="userSpaceOnUse">
@@ -18,4 +18,4 @@ function BellNotification() {
   );
 }
 
-export default BellNotification;
+export default IconBellNotification;

@@ -3,50 +3,51 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { RiArrowDropDownFill } from "react-icons/ri";
-import OrganiseBox from "../iconsJSX/OrganiseBox";
+import { IconDashboard, IconDecisionModels, IconFeesCharges, IconFeesPricing, IconGuarantors, IconKarma, IconLoan, IconLoanProduct, IconLoanRequest, IconOrganisation, IconOrganiseBox, IconPreference, IconReports, IconSavingProduct, IconSavings, IconServiceAccount, IconServices, IconSettlement, IconTransaction, IconUserSvg, IconWhiteList } from "../iconsJSX/";
+import IconAuditLog from "../iconsJSX/IconAuditLog";
 const routes = [
   {
     parent: "CUSTOMERS",
     childLinks: [
       {
         title: "Users",
-        to: "/admin/users",
-        icon: "",
+        to: "/dashboard/users",
+        icon: <IconUserSvg />,
       },
       {
         title: "Guarantors",
-        to: "/admin/guarantors",
-        icon: "",
+        to: "/dashboard/guarantors",
+        icon: <IconGuarantors />,
       },
       {
         title: "Loans",
-        to: "/admin/loans",
-        icon: "",
+        to: "/dashboard/loans",
+        icon: <IconLoan />,
       },
       {
         title: "Decision Models",
-        to: "/admin/decicions",
-        icon: "",
+        to: "/dashboard/decicions",
+        icon: <IconDecisionModels />,
       },
       {
         title: "Savings",
-        to: "/admin/savings",
-        icon: "",
+        to: "/dashboard/savings",
+        icon: <IconSavings />,
       },
       {
         title: "Loan Requests",
-        to: "/admin/loanRequest",
-        icon: "",
+        to: "/dashboard/loanRequest",
+        icon: <IconLoanRequest />,
       },
       {
         title: "Whitelist",
-        to: "/admin/whitelist",
-        icon: "",
+        to: "/dashboard/whitelist",
+        icon: <IconWhiteList />,
       },
       {
         title: "Karma",
-        to: "/admin/karma",
-        icon: "",
+        to: "/dashboard/karma",
+        icon: <IconKarma />,
       },
     ],
   },
@@ -55,23 +56,68 @@ const routes = [
     childLinks: [
       {
         title: "Organization",
-        to: "/admin/organization",
-        icon: "",
+        to: "/dashboard/organization",
+        icon: <IconOrganisation />,
       },
       {
         title: "Loan Products",
-        to: "/admin/loan-product",
-        icon: "",
+        to: "/dashboard/loan-product",
+        icon: <IconLoanProduct />,
       },
       {
         title: "Savings Products",
-        to: "/admin/savings-product",
-        icon: "",
+        to: "/dashboard/savings-product",
+        icon: <IconSavingProduct />,
       },
       {
-        title: "Users",
-        to: "/admin/users",
-        icon: "",
+        title: "Fees and Charges",
+        to: "/dashboard/fee-charges",
+        icon: <IconFeesCharges />,
+      },
+      {
+        title: "Transactions",
+        to: "/dashboard/transaction",
+        icon: <IconTransaction />,
+      },
+      {
+        title: "Services",
+        to: "/dashboard/services",
+        icon: <IconServices />,
+      },
+      {
+        title: "Service Account",
+        to: "/dashboard/service-account",
+        icon: <IconServiceAccount />,
+      },
+      {
+        title: "Settlements",
+        to: "/dashboard/settlement",
+        icon: <IconSettlement />,
+      },
+      {
+        title: "Reports",
+        to: "/dashboard/report",
+        icon: <IconReports />,
+      },
+    ],
+  },
+  {
+    parent: "SETTINGS",
+    childLinks: [
+      {
+        title: "Preferences",
+        to: "/dashboard/preferences",
+        icon: <IconPreference />,
+      },
+      {
+        title: "Fees and Pricing",
+        to: "/dashboard/fee-pricing",
+        icon: <IconFeesPricing />,
+      },
+      {
+        title: "Audit Logs",
+        to: "/dashboard/audit-logs",
+        icon: <IconAuditLog />,
       },
     ],
   },
@@ -82,32 +128,29 @@ const Sidebar = () => {
     <div className="sidebarWrap">
       <div className="container">
         <div className="singleNavListItem navList active">
-          <OrganiseBox />
+          <IconOrganiseBox />
           Switch Organization <RiArrowDropDownFill />
         </div>
-        <NavLink className="navList dashboard" to="/admin">
+        <NavLink className="navList dashboard" to="/dashboard">
+          <IconDashboard />
           Dashboard
         </NavLink>
-        {routes.map((p) => {
-          let childLinks = p.childLinks.map((c) => {
+        {routes.map((p, i) => {
+          let childLinks = p.childLinks.map((c, n) => {
             return (
-              <li>
-                <NavLink
-                  className="navList"
-                  style={{
-                    display: "block",
-                  }}
-                  to={c.to}>
+              <li key={n}>
+                <NavLink className="navList" to={c.to}>
+                  {c.icon}
                   {c.title}
                 </NavLink>
               </li>
             );
           });
           return (
-            <>
+            <div key={i}>
               <h5>{p.parent}</h5>
               <ul className="navSection">{childLinks}</ul>
-            </>
+            </div>
           );
         })}
       </div>

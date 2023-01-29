@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import BellNotification from "../iconsJSX/notification";
+import { IconBellNotification } from "../iconsJSX";
 import { RiArrowDropDownFill } from "react-icons/ri";
 
 const Header = () => {
@@ -9,22 +9,22 @@ const Header = () => {
     <header>
       <div className="header-container">
         <div className="logo">
-          <img src="./images/logo.png" alt="" />
+          <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="lendsqr" />
         </div>
         <div className="searchInput">
           <input type="text" placeholder="search for anything" />
           <div className="searchIcon">
-            <img src="./images/search.png" alt="" />
+            <img src={process.env.PUBLIC_URL + "/images/search.png"} alt="Go" />
           </div>
         </div>
         <div className="profileSection">
           <p className="docs">Docs</p>
           <div>
-            <BellNotification />
+            <IconBellNotification />
           </div>
           <div className="profile">
             <div className="icon">
-              <img src="./images/profile-image.png" alt="" />
+              <img src={process.env.PUBLIC_URL + "/images/profile-image.png"} alt="you" />
             </div>
             <p>Adedeji</p>
             <span>
