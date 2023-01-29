@@ -11,7 +11,7 @@ const routes = [
     childLinks: [
       {
         title: "Users",
-        to: "/dashboard/users",
+        to: "/dashboard/users/details",
         icon: <IconUserSvg />,
       },
       {

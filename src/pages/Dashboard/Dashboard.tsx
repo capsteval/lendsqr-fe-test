@@ -26,7 +26,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <Layout text="Dashboard">
+    <Layout text="Users">
       <CardList />
       <div style={{ marginTop: "40px" }}>
         <Table tableColumns={COLUMNS} userList={userList} />
